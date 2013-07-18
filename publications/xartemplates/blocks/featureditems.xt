@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xar:template xmlns:xar="http://xaraya.com/2004/blocklayout">
+    
+    <!-- Display the featured item -->
+    <xar:if condition="!empty($featuredid)">
+        <xar:if condition="!empty($properties['title']->value)">
+            <h2>
+                <xar:if condition="!empty($featured_alttitle)">
+                    <a href="#$featured_link#">#$featured_alttitle#</a>
+                <xar:else />
+                    <a href="#$featured_link#">
+                        <xar:data-output property="$properties['title']" />
+                    </a>
+                </xar:if>
+            </h2>
+            <xar:if condition="$featured_showfeaturedsum eq true">
+                <div>
+                    <xar:if condition="!empty($featured_altsummary)">
+                        #$featured_altsummary#
+                    <xar:else />
+                        <xar:if condition="!empty($properties['description']->value)">
+                            <xar:data-output property="$properties['description']" />
+                        </xar:if>
+                    </xar:if>
+                </div>
+            </xar:if>
+        </xar:if>
+    </xar:if>
+    
+    <!-- Display the additional items -->
+    <xar:if condition="!empty($items)">
+        <div class="xar-block-title">
+            <xar:if condition="!empty($featuredid)">
+                More Featured Headlines:
+            <xar:else/>
+                Featured Headlines:
+            </xar:if>
+        </div>
+        <ul>
+            <xar:foreach in="$items" value="$item">
+              <li>
+                <xar:if condition="empty($item['featured_link'])">
+                    <xar:data-output property="$properties['title']" value="$item['title']"/>
+                <xar:else />
+                    <a href="#$item['featured_link']#">
+                        <xar:data-output property="$properties['title']" value="$item['title']"/>
+                    </a>
+                </xar:if>
+                <xar:if condition="!empty($item['description'])">
+                    <xar:data-output property="$properties['description']" value="$item['description']"/>
+                </xar:if>
+              </li>
+            </xar:foreach>
+        </ul>
+    </xar:if>
+</xar:template>

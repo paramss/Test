@@ -1,0 +1,4 @@
+database "/usr/local/mtn/terminusmodules.db"
+  branch "ch.netspan.xaraya.modules.bermuda.publications"
+     key "mfl@netspan.ch"
+  keydir "/root/.monotone/keys"

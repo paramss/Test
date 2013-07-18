@@ -1,0 +1,177 @@
+<items>
+  <publications_documents itemid="1">
+    <id>1</id>
+    <name>welcome_document</name>
+    <title>Welcome</title>
+    <body>We are currently under construction. Please come back soon as we continue to add content.</body>
+    <notes>This document can be used as a placeholder for sites under construction.</notes>
+    <parent>0</parent>
+    <author>6</author>
+    <state>4</state>
+    <pages>1</pages>
+    <locale>en_US.utf-8</locale>
+    <itemtype>2</itemtype>
+    <start_date>1321701019</start_date>
+    <end_date>1353237019</end_date>
+    <no_end>1</no_end>
+    <version>1</version>
+    <summary_template>0</summary_template>
+    <detail_template>0</detail_template>
+    <page_template></page_template>
+    <theme></theme>
+    <categories></categories>
+    <created>1321701019</created>
+    <modified>1321701019</modified>
+    <process_state>1</process_state>
+    <position>a:4:{i:0;i:1;i:1;i:0;i:2;i:1;i:3;i:2;}</position>
+        <access>a:3:{s:7:&quot;display&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}s:6:&quot;modify&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}s:6:&quot;delete&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}}</access>
+    <redirect_flag>0</redirect_flag>
+    <redirect_url></redirect_url>
+    <proxy_url></proxy_url>
+    <alias_flag>0</alias_flag>
+    <alias></alias>
+    <page_title></page_title>
+    <page_description></page_description>
+    <keywords></keywords>
+  </publications_documents>
+  <publications_documents itemid="2">
+    <id>2</id>
+    <name>error_page</name>
+    <title>Error</title>
+    <body>Sorry! An error has occurred.</body>
+    <notes>This is a general error page where errors can be caught that are not due to the page not being found or access not granted.</notes>
+    <parent>0</parent>
+    <author>6</author>
+    <state>3</state>
+    <pages>1</pages>
+    <locale>en_US.utf-8</locale>
+    <itemtype>2</itemtype>
+    <start_date>1321726088</start_date>
+    <end_date>1353262088</end_date>
+    <no_end>1</no_end>
+    <version>1</version>
+    <summary_template>0</summary_template>
+    <detail_template>0</detail_template>
+    <page_template></page_template>
+    <theme></theme>
+    <categories></categories>
+    <created>1321726088</created>
+    <modified>1321726088</modified>
+    <process_state>1</process_state>
+    <position>a:4:{i:0;i:2;i:1;i:0;i:2;i:3;i:3;i:4;}</position>
+    <access>a:3:{s:7:&quot;display&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}s:6:&quot;modify&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}s:6:&quot;delete&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}}</access>
+    <redirect_flag>0</redirect_flag>
+    <redirect_url></redirect_url>
+    <proxy_url></proxy_url>
+    <alias_flag>0</alias_flag>
+    <alias></alias>
+    <page_title></page_title>
+    <page_description></page_description>
+    <keywords></keywords>
+  </publications_documents>
+  <publications_documents itemid="3">
+    <id>3</id>
+    <name>not_found_page</name>
+    <title>Page Not Found</title>
+    <body>Sorry! The page you requested could not be found.</body>
+    <notes>This page displays when the page requested isn't available to this user due to causes other than access permissions.</notes>
+    <parent>0</parent>
+    <author>6</author>
+    <state>3</state>
+    <pages>1</pages>
+    <locale>en_US.utf-8</locale>
+    <itemtype>2</itemtype>
+    <start_date>1321726254</start_date>
+    <end_date>1353262254</end_date>
+    <no_end>1</no_end>
+    <version>1</version>
+    <summary_template>0</summary_template>
+    <detail_template>0</detail_template>
+    <page_template></page_template>
+    <theme></theme>
+    <categories></categories>
+    <created>1321726254</created>
+    <modified>1321726254</modified>
+    <process_state>1</process_state>
+    <position>a:4:{i:0;i:3;i:1;i:0;i:2;i:5;i:3;i:6;}</position>
+    <access>a:3:{s:7:&quot;display&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}s:6:&quot;modify&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}s:6:&quot;delete&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}}</access>
+    <redirect_flag>0</redirect_flag>
+    <redirect_url></redirect_url>
+    <proxy_url></proxy_url>
+    <alias_flag>0</alias_flag>
+    <alias></alias>
+    <page_title></page_title>
+    <page_description></page_description>
+    <keywords></keywords>
+  </publications_documents>
+  <publications_documents itemid="4">
+    <id>4</id>
+    <name>no_permissions_page</name>
+    <title>No Access</title>
+    <body>Sorry! You do not have access to this page.</body>
+    <notes>This page displays when access is not granted to the current user.</notes>
+    <parent>0</parent>
+    <author>6</author>
+    <state>3</state>
+    <pages>1</pages>
+    <locale>en_US.utf-8</locale>
+    <itemtype>2</itemtype>
+    <start_date>1321726366</start_date>
+    <end_date>1353262366</end_date>
+    <no_end>1</no_end>
+    <version>1</version>
+    <summary_template>0</summary_template>
+    <detail_template>0</detail_template>
+    <page_template></page_template>
+    <theme></theme>
+    <categories></categories>
+    <created>1321726366</created>
+    <modified>1321726366</modified>
+    <process_state>1</process_state>
+    <position>a:4:{i:0;i:4;i:1;i:0;i:2;i:7;i:3;i:8;}</position>
+    <access>a:3:{s:7:&quot;display&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}s:6:&quot;modify&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}s:6:&quot;delete&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}}</access>
+    <redirect_flag>0</redirect_flag>
+    <redirect_url></redirect_url>
+    <proxy_url></proxy_url>
+    <alias_flag>0</alias_flag>
+    <alias></alias>
+    <page_title></page_title>
+    <page_description></page_description>
+    <keywords></keywords>
+  </publications_documents>
+  <publications_documents itemid="5">
+    <id>4</id>
+    <name>sitemap_page</name>
+    <title>Site Map</title>
+    <body>Click on a link to go to the corresponding page.</body>
+    <notes>This page displays a site map of the publications. The publications included in the map are those whose site map flag has been set.</notes>
+    <parent>0</parent>
+    <author>6</author>
+    <state>3</state>
+    <pages>1</pages>
+    <locale>en_US.utf-8</locale>
+    <itemtype>2</itemtype>
+    <start_date>time()</start_date>
+    <end_date>time()</end_date>
+    <no_end>1</no_end>
+    <version>1</version>
+    <summary_template>0</summary_template>
+    <detail_template>1</detail_template>
+    <page_template></page_template>
+    <theme></theme>
+    <categories></categories>
+    <created>time()</created>
+    <modified>time()</modified>
+    <process_state>1</process_state>
+    <position>a:4:{i:0;i:5;i:1;i:0;i:2;i:9;i:3;i:10;}</position>
+    <access>a:3:{s:7:&quot;display&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}s:6:&quot;modify&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}s:6:&quot;delete&quot;;a:3:{s:5:&quot;group&quot;;s:1:&quot;0&quot;;s:5:&quot;level&quot;;s:3:&quot;100&quot;;s:7:&quot;failure&quot;;s:1:&quot;0&quot;;}}</access>
+    <redirect_flag>0</redirect_flag>
+    <redirect_url></redirect_url>
+    <proxy_url></proxy_url>
+    <alias_flag>0</alias_flag>
+    <alias></alias>
+    <page_title></page_title>
+    <page_description></page_description>
+    <keywords></keywords>
+  </publications_documents>
+</items>

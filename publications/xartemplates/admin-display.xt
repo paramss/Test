@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xar:template xmlns:xar="http://xaraya.com/2004/blocklayout">
+    <!-- License: GPL http://www.gnu.org/copyleft/gpl.html -->
+    <xar:template file="admin-mod-head"/>
+    <div class="xar-mod-body">
+        <xar:if condition="$allow">
+            <div>
+                The state of this page is <b><xar:data-output property="$properties['state']"/></b>
+            </div>
+            <xar:data-display object="$object" tplmodule="publications" layout="$layout"/>
+        <xar:else/>
+            This publication cannot be viewed
+        </xar:if>
+    </div>
+</xar:template>

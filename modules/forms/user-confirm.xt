@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xar:template xmlns:xar="http://xaraya.com/2004/blocklayout">
+    <!-- License: GPL http://www.gnu.org/copyleft/gpl.html -->
+
+    <div class="xar-mod-head">
+        <span class="xar-mod-title">
+            <xar:if condition="empty($definitiondata['customtitle'])">
+                Contact Form
+            <xar:else />
+                #$definitiondata['customtitle']#
+            </xar:if>
+        </span>
+    </div>
+
+    <div class="xar-mod-body">
+        <xar:if condition="$result eq 0">
+            <p style="text-align: center; padding:20px;">
+                Thank you for your submission
+            </p>
+            <p style="text-align: center; padding:20px;">
+                A confirmation email has been sent to the email address you submitted
+            </p>
+        <xar:elseif condition="$result eq -1"/>
+            <p style="text-align: center; padding:20px;">
+                Thank you for your submission
+            </p>
+        <xar:else />
+            <p style="text-align: center; padding:20px;">
+                Sorry, your submission could not be processed
+            </p>
+        </xar:if>
+        <xar:if condition="!empty($return_url)">
+            <p style="text-align: center; padding:20px;">
+                <a href="#$return_url#">Go back</a>
+            </p>
+        </xar:if>
+    </div>
+</xar:template>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xar:template xmlns:xar="http://xaraya.com/2004/blocklayout">
+    <!-- License: GPL http://www.gnu.org/copyleft/gpl.html -->
+    
+    <div class="xar-mod-body">
+        <form action="#xarModURL('forms','user','display',array('form' => $form))#" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Contact Form</legend>
+                <xar:data-form object="$formcontainer->form_object" tplmodule="forms"/>
+           </fieldset>
+
+           <fieldset>
+               <div class="xar-form-input-wrapper-after" style="margin: 5px">
+                    <input type="hidden" name="authid" id="authid" value="#xarSecGenAuthKey()#"/>
+                    <input type="hidden" name="return_url" id="return_url" value="#xarModURL('forms','user','display',array('form' => $form))#"/>
+                    <input type="hidden" name="confirm" id="confirm" value="true"/>
+                    <xar:var name="label">Submit</xar:var>
+                    <xar:button type="submit" label="$label"/>
+               </div>
+           </fieldset>
+      </form>
+    </div>
+</xar:template>

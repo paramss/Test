@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xar:template xmlns:xar="http://xaraya.com/2004/blocklayout">
+    <div id="fixedTop">
+        <div id="headerWrapper">
+            <div id="header">
+                <div id="logo" onclick="self.location.href='#xarServer::getBaseURL()#'">
+                    <img src="#xarTplGetImage('title.png','theme')#" alt="From Innovation to Cash Flows"/>
+                </div>
+                <div id="headerTools" style="float: right">    
+                    <div id="topMenu">
+                        <a href="#xarModURL('authsystem','user','showloginform',array('redirecturl' => xarModURL('publications','user','main')))#">
+                            Sign in
+                        </a>
+                        &#160;&#160;|&#160;&#160;
+                        <a href="#xarModURL('registration','user','register')#" class="active">
+                            Sign up
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="mainMenuWrapper">
+          <div id="mainMenu">        
+              <xar:block type="staticmenu" module="publications"/>
+            <!--
+            If you need a direct link on one of the root menu voices replace the actual click event callback with your root menu voice action;
+            Ex: <li class="rootVoice {menu: 'empty'}" onclick="self.location.href='FAQ/FAQ.php'">FAQ</li>
+            Read the mb.menu Doc (https://github.com/pupunzi/jquery.mb.menu/wiki) to learn how you can customize the behaviour of the component.
+            -->
+            <xar:if condition="$targetfunction eq 'view'">
+                <xar:template file="categorymenu" type="theme"/>
+            </xar:if>
+
+            <xar:if condition="xarUserIsLoggedIn()">
+            </xar:if>
+            
+            <xar:sec mask="ManageDynamicData" catch="false">
+                <a title="#xarML('View the site back end interface')#" href="#xarModURL('publications','admin','main')#" style="float: right; font-color: white">
+                    <span style="font-size: 10pt; color: ##fff">[View Back End]</span>&#160;&#160;
+                </a>
+            </xar:sec>
+          </div>
+        </div>
+    </div>
+</xar:template>

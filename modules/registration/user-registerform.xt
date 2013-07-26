@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xar:template xmlns:xar="http://xaraya.com/2004/blocklayout">
+    <!-- License: GPL http://www.gnu.org/copyleft/gpl.html -->
+    <xar:template file="user-mod-head"/>
+
+    <div class="xar-mod-body">
+        <h2>Registration</h2>
+        <xar:if condition="$object:upload">
+            <xar:set name="enc_type">'multipart/form-data'</xar:set>
+        <xar:else/>
+            <xar:set name="enc_type">'application/x-www-form-urlencoded'</xar:set>
+        </xar:if>
+
+        <form method="post" id="post" action="&xar-modurl-registration-user-register;" enctype="#$enc_type#">
+            <fieldset>
+
+                <xar:data-form object="$object" tplmodule="registration"/>
+                <xar:if condition="xarModVars::get('registration','showterms') eq 0 and xarModVars::get('registration','showprivacy') eq 1">
+                    <div class="xar-form-input-wrapper">
+                        <span class="xar-form-label-short">
+                            <input type="checkbox" name="agreetoterms" id="agreetoterms" value="1"/>
+                        </span>
+                        <label for="agreetoterms"  title="#xarML('Please check to agree to the website requirements')#">
+                            I agree to be bound by this website's 
+                            <a href="&xar-modurl-registration-user-privacy;">Privacy Policy</a>.
+                        </label>
+                            <xar:if condition="!empty($invalid['agreetoterms'])">
+                                <span class="xar-error">#$invalid['agreetoterms']#</span>
+                            </xar:if>
+                    </div>
+                <xar:elseif condition="xarModVars::get('registration','showprivacy') eq 0 and xarModVars::get('registration','showterms') eq 1"/>
+                    <div class="xar-form-input-wrapper">
+                        <span class="xar-form-label-short">
+                            <input type="checkbox" name="agreetoterms" id="agreetoterms" value="1"/>
+                        </span>
+                        <label for="agreetoterms" title="#xarML('Please check to agree to the website requirements')#">
+                            I agree to be bound by this website's 
+                            <a href="&xar-modurl-registration-user-terms;" target="_blank">Terms of Use</a>.
+                        </label>
+                        <xar:if condition="isset($termsmsg)">
+                            <span class="xar-error">Please agree to the terms</span>
+                        </xar:if>
+                    </div>
+                <xar:elseif condition="xarModVars::get('registration','showprivacy') eq 1 and xarModVars::get('registration','showterms') eq 1"/>
+                    <div class="xar-form-input-wrapper">
+                        <span class="xar-form-label-short">
+                            <input type="checkbox" name="agreetoterms" id="agreetoterms" value="1"/>
+                        </span>
+                        <label for="agreetoterms"  title="#xarML('Please check to agree to the website requirements')#">
+                            I agree to be bound by this website's&#160;
+                            <a href="index.php?module=publications&amp;type=user&amp;func=display&amp;itemid=15" target="_blank">Terms of Use</a>&#160;and&#160;<a href="index.php?module=publications&amp;type=user&amp;func=display&amp;itemid=14" target="_blank">Privacy Policy</a>.
+                         </label>
+                    </div>
+                    <xar:if condition="isset($termsmsg)">
+                        <span class="xar-error">Please agree to the terms</span>
+                     </xar:if>   
+                <xar:else />
+                    <input type="hidden" name="agreetoterms" id="agreetoterms" value="1"/>
+                </xar:if>
+            </fieldset>
+            <fieldset>
+                <div class="xar-form-input-wrapper-after">
+                    <xar:var name="label">Submit</xar:var>
+                    <xar:button type="submit" id="submit" value="$label"/>
+                </div>
+                <input type="hidden" name="authid" id="authid" value="#$authid#"/>
+                <input type="hidden" name="phase" id="phase" value="checkregistration"/>
+            </fieldset>
+        </form>
+    </div>
+</xar:template>

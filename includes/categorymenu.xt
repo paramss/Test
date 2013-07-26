@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xar:template xmlns:xar="http://xaraya.com/2004/blocklayout">
+    <xar:set name="items">xarMod::apiFunc('categories','user','getcat',array('getchildren'=>1,'cid'=>10))</xar:set>
+    
+    <!-- Rearrange the array by parent ID -->
+    <xar:set name="sorteditems">array()</xar:set>
+    <xar:foreach in="$items" value="$item">
+        <xar:set name="dummy">1;$sorteditems[$item['parent']][] = $item</xar:set>
+    </xar:foreach>
+    <xar:set name="cnt">'0'</xar:set>
+
+    <!-- Create all the sublevels -->
+    <xar:foreach in="$sorteditems" key="$key" value="$children">
+        <div id="children_of_#$key#" class="mbmenu">
+            <xar:if condition="$cnt eq 0">
+                <a href="#xarModURL('eventhub','user','categorysearch',array('itemid'=>0))#">Show All</a>
+            </xar:if>
+            <xar:set name="cnt">'1'</xar:set>
+            <xar:foreach in="$children" key="$childkey" value="$child">
+                <xar:if condition="isset($sorteditems[$child['id']])">
+                    <a class="sub-menu {menu: 'children_of_#$child['id']#'}" href="#xarModURL('eventhub','user','categorysearch',array('itemid'=>$child['id']))#">#$child['name']#</a>
+                <xar:else/>
+                    <a href="#xarModURL('eventhub','user','categorysearch',array('itemid'=>$child['id']))#">#$child['name']#</a>
+                </xar:if>
+            </xar:foreach>
+        </div>
+    </xar:foreach>
+    <!-- Add the top level -->
+    <ul>
+        <li class="rootVoice {menu: 'children_of_10'}">Event Filter</li>
+    </ul>
+    
+</xar:template>

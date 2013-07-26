@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xar:template xmlns:xar="http://xaraya.com/2004/blocklayout">
+
+    <!-- Define directories -->
+    <xar:set name="cssdir">'themes/goldfingered/style'</xar:set>
+
+    <!-- Menu CSS -->
+    <link href="#$cssdir#/menu.css" rel="stylesheet" type="text/css"/>
+                   
+    <!-- Bootstrap CSS and JS -->
+    <link href="#$cssdir#/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+   <!-- Root menu -->
+    <ul>
+        <xar:foreach in="$menuarray[0]" value="$node">
+            <xar:if condition="isset($menuarray[$node['id']])">
+                <li style="margin-right: 5px" class="rootVoice {menu: 'menu-#$node['id']#'}" href="#xarModURL('publications','user','display',array('itemid' => $node['id']))#">#$node['label']#</li>
+            <xar:else/>
+                <li style="margin-right: 5px" class="rootVoice"><a href="#xarModURL('publications','user','display',array('itemid' => $node['id']))#">#$node['label']#</a></li>
+            </xar:if>
+        </xar:foreach>
+    </ul>
+
+   <!-- Submenus -->
+    <xar:foreach in="$menuarray" key="$key" value="$nodes">
+        <xar:if condition="$key eq 0">
+            <xar:continue/>
+        </xar:if>
+        <div id="menu-#$key#" class="mbmenu">
+            <xar:foreach in="$nodes" value="$node">
+                <xar:if condition="isset($menuarray[$node['id']])">
+                    <a class="{menu: 'menu-#$node['id']#'} sub-menu" href="#xarModURL('publications','user','display',array('itemid' => $node['id']))#">#$node['label']#</a>
+                <xar:else/>
+                    <a class="sub-menu" href="#xarModURL('publications','user','display',array('itemid' => $node['id']))#">#$node['label']#</a>
+                </xar:if>
+            </xar:foreach>
+        </div>
+    </xar:foreach>
+</xar:template>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xar:template xmlns:xar="http://xaraya.com/2004/blocklayout">
+    <div id="footer">
+        <a href="#xarServer::getCurrentURL(array('theme' => 'rss'))#">
+            Subscribe to the current Feed <img src="#xarTplGetImage('rss.png','theme')#" align="absmiddle"/>
+        </a>
+    </div>
+</xar:template>

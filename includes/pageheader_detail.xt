@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xar:template xmlns:xar="http://xaraya.com/2004/blocklayout">
+    <div id="fixedTop">
+        <div id="headerWrapper">
+            <div id="header">
+                <div id="logo" onclick="self.location.href='#xarServer::getBaseURL()#'"><img src="#xarTplGetImage('logo.png','theme')#"/></div>
+                <div id="headerTools">    
+                    <div id="search">
+                        <form id="searchForm" action="#xarModURL('publications','user','search')#">
+                            <input placeholder="Who, What, Why, When?"/>
+                            <span id="searchBtn" onclick="$('##searchForm').submit()"></span>
+                        </form>
+                    </div>
+                    <div id="topMenu"><a href="#xarModURL('authsystem','user','showloginform')#">Sign in</a>&#160;&#160;|&#160;&#160;<a href="#xarModURL('registration','user','register')#" class="active">Sign up</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</xar:template>

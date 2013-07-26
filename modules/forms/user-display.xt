@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xar:template xmlns:xar="http://xaraya.com/2004/blocklayout">
+    <!-- License: GPL http://www.gnu.org/copyleft/gpl.html -->
+
+    <!-- Load the stylesheet for this publication type -->
+    <xar:style method="import" module="publications" file="document" title="Document Stylesheet"/>
+    
+    <div class="box" style="padding: 30px">
+        <div class="xar-mod-head">
+            <span class="xar-publications-document-detail-title">
+                Contact Form
+            </span>
+        </div>
+        
+        <div class="xar-mod-body">
+            <form action="#xarModURL('forms','user','display',array('form' => $form))#" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <xar:data-form object="$formcontainer->form_object" tplmodule="forms"/>
+               </fieldset>
+    
+               <fieldset>
+                   <div class="xar-form-input-wrapper-after" style="margin: 5px">
+                        <input type="hidden" name="authid" id="authid" value="#xarSecGenAuthKey()#"/>
+                        <input type="hidden" name="return_url" id="return_url" value="#xarModURL('forms','user','display',array('form' => $form))#"/>
+                        <input type="hidden" name="confirm" id="confirm" value="true"/>
+                        <xar:var name="label">Submit</xar:var>
+                        <xar:button type="submit" label="$label"/>
+                   </div>
+               </fieldset>
+          </form>
+        </div>
+    </div>
+</xar:template>

@@ -1,0 +1,483 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+/*    background: #F6F0E7 url(/images/background3.jpg) repeat-x left top;  */
+/*    color: #020;  */
+    font: .8em/1.5em Arial, Geneva;
+}
+/* remove redundant default style */
+input, textarea {
+    margin: 0;
+}
+
+/* Headers */
+.translator ul {
+	padding: 0px;margin: 0px;
+	text-align: right;
+	margin-left: 30px;
+	}
+.translator ul li {
+	display: block;
+	float: left;
+	}
+.translator ul li a {
+	display: block;
+	font-size: 12px;
+	padding: 6.5px 10px;
+	!padding: 6px 10px;
+	margin: -3px 3px -3px 0px;
+	!margin: 0px 3px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+	height:15px!important;
+	!height:20px;
+	!width: 53;
+	}
+
+/* layout */
+#wrapper {
+    /* to prevent the content area to become too wide (with respect to line-length) */
+    margin: 1.5em 1.5em 1.5em 5em;
+    width: 100%;
+    max-width: 84em;
+    position: relative;
+}
+#user-wrapper {
+    /* to prevent the content area to become too wide (with respect to line-length) */
+    margin: 1.5em 1.5em 1.5em 5em;
+    width: 100%;
+    max-width: 84em;
+    position: relative;
+}
+#admin-wrapper {
+    /* to prevent the content area to become too wide (with respect to line-length) */
+    margin: 1.5em auto;
+    width: 100%;
+    position: relative;
+}
+#main {
+    padding: 1.5em;
+    margin: 0 1.5em 0 16.5em;
+    border: 1px dotted #0051BA;
+    border-width: 0 1px;
+/*    background: #F6F0E7; */
+    color: #020;  
+    min-height: 537px;
+}
+#user-main {
+    padding: 1.5em;
+    margin: 0 1.5em 0 16.5em;
+    border: 1px dotted #0051BA;
+    border-width: 0 1px;
+/*    background: #F6F0E7;  */
+/*    color: #020;  */
+    min-height: 537px;
+}
+#admin-main {
+    padding: 1.5em;
+    margin: 0 1.5em 0 16.5em;
+    border: 1px dotted #D77043;
+    border-width: 0 1px;
+    background: #F6F0E7;
+    background-color: rgba(255,238,199,1);
+/*    color: #020;  */
+    min-height: 537px;
+}
+#logo {
+    padding: 1.5em;
+    /*  we have something to chose from */
+    /*  background: #8BADA4 url(../images/header4b2.jpg) repeat-x left bottom;*/
+/*    background: #0051BA url(../images/header2b.jpg) no-repeat left top;  */
+    height: 90px;
+    position: relative;
+}
+#logo img {
+    float: right;
+    width: 115px;
+    margin-right: 1.5em;
+}
+#logo p {
+    position: absolute;
+    bottom: 1.1em;
+/*    margin: 0 0 0 90px; */
+    padding-left: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 120%;
+    letter-spacing: .1em;
+    text-align: left;
+/*    color: #F6F0E7;  */
+}
+.sideInfo {
+    position: absolute;
+    top: 90px;
+    width: 13.5em;
+    margin: 0 1.5em;
+    padding: 4.5em 0 1.5em;
+}
+.admin-sideInfo {
+    position: absolute;
+    top: 0px;
+    width: 13.5em;
+    margin: 0 1.5em;
+    padding: 4.5em 0 1.5em;
+}
+#sideInfo1 {
+    left: 0;
+}
+#sideInfo2 {
+    right: 0;
+}
+a img {
+    border: 0;
+}
+a:link {
+    color: #0051BA;
+    text-decoration: none; 
+}
+a:visited {
+    color: #845161;
+/*    border-bottom: 1px dotted #845161;*/
+}
+a:hover, a:focus {
+    color: #845161;
+/*    border-bottom: 1px solid #2352A8; */
+}
+a:active {
+    color: #0051BA;
+/*    border-bottom: 1px solid #0051BA; */
+}
+#main h2 {
+    font: italic normal 1.5em Arial, Geneva;
+    text-align: center;
+}
+.xar-mod-head {
+}
+.xar-mod-title {
+    text-transform: uppercase;
+    font-size: .88em;
+    letter-spacing: .1em;
+    color: #0051BA;
+}
+.xar-mod-body {
+}
+.xar-mod-foot {
+}
+.xar-norm {
+    background-color: #FFFFFF;
+}
+.xar-norm-outline {
+    border-color: #0051BA;
+}
+.xar-alt {
+    background-color: #FFFFFF;
+}
+.xar-alt-outline {
+    border-color: #6B5273;
+}
+.xar-accent {
+    background-color: #F6F0E7;
+}
+.xar-accent-outline {
+    border-color: #0051BA;
+}
+.xar-sub {
+}
+
+/* tab structure (margin, padding, float, etc is controlled in core css in 
+   the base module.  Colors (border, background) are inherited from the norm, 
+   alt, accent classes above.  The below rules are intended to be 
+   theme-specific supplements.
+*/
+
+/* tabs parent element */
+ul.xar-tabs {
+    font-size: .9em;
+}
+/* tabs label */
+ul.xar-tabs li.xar-tabs-label {
+    color: #0051BA;
+    text-transform: uppercase;
+}
+/* inactive tab */
+ul.xar-tabs li.xar-tab {
+}
+/* active tab */
+ul.xar-tabs li.xar-tab-active {
+}
+/* inactive tab link */
+ul.xar-tabs li.xar-tab a {
+    text-decoration: none;
+}
+/* active tab link */
+ul.xar-tabs li.xar-tab-active a {
+    text-decoration: none;
+}
+/* inactive tab link hover - not handled elsewhere */
+ul.xar-tabs li.xar-tab a:hover {
+/*    background-color: #F5EADC;  */
+}
+/* active tab link hover - not handled elsewhere */
+ul.xar-tabs li.xar-tab-active a:hover {
+    background-color: #f5dcbb;
+}
+/* pager structure (margin, padding, etc is controlled in pager.css in 
+   the base module.  Colors (border, background) are inherited from the norm, 
+   alt, accent classes above.  The below rules are intended to be 
+   theme-specific supplements.
+*/
+/* pager label */
+div.xar-pager span.xar-pager-label {
+    color: #0051BA;
+    font-size: 0.9em;
+}
+/* inactive page link hover - not handled elsewhere */
+div.xar-pager span.xar-page a:hover {
+    background-color: #F5EADC;
+}
+
+.sideInfo .xar-block-title {
+    text-transform: uppercase;
+    font-size: .88em;
+    letter-spacing: .1em;
+    color: #0051BA;
+    border-top: 1px solid #0051BA;
+    text-align: right;
+}
+.sideInfo .xar-block-body {
+    margin: 0 0 1.5em;
+}
+.sideInfo ul {
+    margin: 0 0 1.5em;
+    padding: 0;
+}
+.sideInfo ul ul {
+    margin: 0;
+}
+.sideInfo li {
+    margin: 0;
+    list-style-type: none;
+}
+.sideInfo li li li {
+    padding-left: 1em;
+    margin-left: .25em;
+    background: transparent url(../images/li-bullet2-5.png) no-repeat center left;
+}
+.sideInfo h4 {
+    margin: 0;
+    font: italic normal 1em Arial, Geneva;
+}
+.admin-sideInfo .xar-block-title {
+    text-transform: uppercase;
+    font-size: .88em;
+    letter-spacing: .1em;
+    color: #0051BA;
+    border-top: 1px solid #0051BA;
+    text-align: right;
+}
+.admin-sideInfo .xar-block-body {
+    margin: 0 0 1.5em;
+}
+.admin-sideInfo ul {
+    margin: 0 0 1.5em;
+    padding: 0;
+}
+.admin-sideInfo ul ul {
+    margin: 0;
+}
+.admin-sideInfo li {
+    margin: 0;
+    list-style-type: none;
+}
+.admin-sideInfo li li li {
+    padding-left: 1em;
+    margin-left: .25em;
+    background: transparent url(../images/li-bullet2-5.png) no-repeat center left;
+}
+.admin-sideInfo h4 {
+    margin: 0;
+    font: italic normal 1em Arial, Geneva;
+}
+.xar-menu-section {
+}
+.xar-menu-section-current {
+}
+.xar-menu-item {
+}
+.xar-menu-item-current {
+}
+.xar-menu-item:hover {
+}
+.xar-menu-subitem {
+}
+.xar-menu-subitem:hover {
+
+}
+.xar-menu-subitem-current {
+}
+.xar-menu-item-current > .xar-menu-subitem > a {
+}
+.xar-menu-item-current > .xar-menu-subitem > a:visited {
+}
+.xar-title {
+	font: 16px/18px Arial, Geneva;
+}
+.xar-error {
+}
+
+/* standard forms */
+fieldset {
+    border: 1px solid #0051BA;
+    margin: 0 0 2.25em;
+    padding: 0.5em 1.5em .5em;
+}
+legend {
+    text-transform: uppercase;
+    font-size: .88em;
+    letter-spacing: .1em;
+    color: #0051BA;  
+}
+fieldset fieldset {
+    margin: 1.5em 0 1.5em;
+    padding: 0;
+    border-color: #CECBC9;
+    border-right: 0;
+    border-left: 0;
+    padding-bottom: 0;
+    /*  background-color: rgba(255,255,255,.33);*/
+    clear: left;
+}
+fieldset fieldset legend {
+    color: #7D7875;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1em;
+    display: none;
+}
+form p {
+    margin: 0;
+}
+.textInputContainer, .passInputContainer, .checkInputContainer, .radioInputContainer, .selectContainer, .textareaContainer {
+    margin: .375em 0 .75em;
+    clear: left;
+}
+#main .textInputContainer label, #main .passInputContainer label, #main .selectContainer label, #main .textareaContainer label {
+    float: left;
+    width: 25%;
+    text-align: right;
+}
+#main .textInputContainer input, #main .passInputContainer input {
+    width: 70%;
+    max-width: 18em;
+    margin: 0 .75em;
+}
+.selectContainer select {
+    margin: 0 0 0 .75em;
+}
+.textareaContainer textarea {
+    width: 70%;
+    margin: 0 0 0 .75em;
+}
+.checkInputContainer {
+    margin-left: 25%;
+    padding-left: 2.25em;
+    text-indent: -1.5em;
+}
+.infoAddedInput {
+    margin-left: 25%;
+    padding-left: .85em;
+    font-size: .88em;
+    color: #7D7875;
+}
+#main .textInputContainer .infoAddedInput input, #main .passInputContainer .infoAddedInput input {
+    margin: 0;
+}
+
+/* standard tables */
+table {
+    width: 100%;
+    margin: 1.5em 0;
+    border-collapse: collapse;
+    border: 1px dotted #0051BA;
+    border-width: 1px 0;
+/*    background-color: #F6F0E7;  */
+}
+table + table {
+    margin-top: 3em;
+}
+tr:nth-child(odd) {
+    background-color: #F6F0E7; /* darker */
+    background-color: #FFFFFF; /* lighter */ 
+
+}
+th, td {
+    padding: .125em .25em;
+    text-align: left;
+    font-weight: normal;
+}
+thead, th {
+    text-transform: uppercase;
+    font-size: .88em;
+    letter-spacing: .1em;
+/*    color: #0051BA;*/
+}
+tfoot {
+    border-top: 1px solid #0051BA;
+}
+
+pre {
+    font-size: 95%;
+    font-family: monaco, courier, monospace;
+}
+
+/* specific blocks */
+#authsystemBlocksLogin fieldset {
+    padding: 0 .75em .75em;
+}
+#authsystemBlocksLogin div, #authsystemBlocksLogin p {
+    margin: 0 0 .75em;
+}
+#authsystemBlocksLogin .checkInputContainer {
+    margin-left: 0;
+    padding-left: 1.5em;
+}
+#authsystemBlocksLogin .textInputContainer label, #authsystemBlocksLogin .passInputContainer label {
+    font: italic normal 1em Arial, Geneva;
+}
+#authsystemBlocksLogin .textInputContainer input, #authsystemBlocksLogin .passInputContainer input {
+    width: 96%; /* wanted to do this with display: block, but that does not work correctly, this seems to work best... */
+}
+
+/*
+module related styling
+-------------------------------------------------------------------------[comment] */
+div.xar-publications-news-summary-title {
+	font: 16px/18px Arial, Geneva;
+    color: #0051BA;
+    border-bottom: 1px solid #0051BA;
+}
+
+div.xar-publications-news-summary-postby {
+	font: 8px/10px Arial, Geneva;
+    color: #0051BA;
+}
+
+/*
+icon related styling
+-------------------------------------------------------------------------[comment] */
+
+a.xar-icon {
+    text-decoration: none;
+}
+a.xar-icon img{
+    vertical-align: text-top;
+}
+img.xar-icon {
+    vertical-align: text-top;
+}
+img.xar-icon-disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    vertical-align: text-top;
+}

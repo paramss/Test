@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xar:template xmlns:xar="http://xaraya.com/2004/blocklayout">
+    <!-- Define directories -->
+    <xar:set name="cssdir">'themes/goldfingered/style'</xar:set>
+
+    <!-- Google fonts import -->
+    <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'/>
+    
+    <!-- Menu CSS -->
+    <link href="#$cssdir#/menu.css" rel="stylesheet" type="text/css"/>
+    <!-- Site CSS -->
+    <link href="#$cssdir#/goldfingered.css" rel="stylesheet" type="text/css"/>
+    
+    <!-- jQuery 1.7.2 -->
+    <xar:javascript type="src" src="http://code.jquery.com/jquery-1.7.2.min.js" position="head"/>
+    
+    <!-- Menu JS -->
+    <xar:javascript filename="eventHub.js" scope="theme" theme="eventhub" position="head"/>
+    
+    <xar:javascript filename="mbmenu/inc/jquery.metadata.js" scope="theme" theme="eventhub" position="head"/>
+    <xar:javascript filename="mbmenu/inc/jquery.hoverIntent.js" scope="theme" theme="eventhub" position="head"/>
+    <xar:javascript filename="mbmenu/inc/mbMenu.js" scope="theme" theme="eventhub" position="head"/>
+
+    <!-- Bootstrap CSS and JS -->
+    <link href="#$cssdir#/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <xar:javascript type="src" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js" position="head"/>
+    <xar:javascript type="src" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-button.js" position="head"/>
+
+</xar:template>
